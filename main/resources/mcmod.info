@@ -1,0 +1,16 @@
+[
+{
+  "modid": "supercraft",
+  "name": "Supercraft",
+  "description": "The mod to end all mods.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "www.sparkzz.net/supercraft",
+  "updateUrl": "",
+  "authorList": ["MrSparkzz"],
+  "credits": "MrSparkzz, for making the mod.",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
