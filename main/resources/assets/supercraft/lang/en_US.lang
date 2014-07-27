@@ -2,4 +2,8 @@ language.name=English
 language.region=US
 language.code=en_US
 
+itemGroup.tabSupercraft=Supercraft
+
+item.hyperdiamond.name=Hyperdiamond
+
 tile.hyperdiamondOre.name=Hyperdiamond Ore

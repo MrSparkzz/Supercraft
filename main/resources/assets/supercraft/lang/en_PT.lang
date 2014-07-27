@@ -2,4 +2,8 @@ language.name=Pirate Speak
 language.region=Web
 language.code=en_PT
 
+itemGroup.tabSupercraft=Supercraft
+
+item.hyperdiamond.name=Better Sparkler
+
 tile.hyperdiamondOre.name=Better Shinies

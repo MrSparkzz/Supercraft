@@ -23,7 +23,7 @@ public class Supercraft {
 
 		@Override
 		public Item getTabIconItem() {
-			return Items.hyperdiamond;
+			return Items.icon;
 		}
 	};
 
@@ -31,14 +31,14 @@ public class Supercraft {
 	public void preInit(FMLPreInitializationEvent event) {
 		Blocks.registerBlocks();
 
-		Crafting.brewingRecipes();
-		Crafting.shapedRecipes();
-		Crafting.shapelessRecipes();
-		Crafting.smeltingRecipes();
+		Items.registerItems();
 	}
 
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
-
+		Crafting.brewingRecipes();
+		Crafting.shapedRecipes();
+		Crafting.shapelessRecipes();
+		Crafting.smeltingRecipes();
 	}
 }
