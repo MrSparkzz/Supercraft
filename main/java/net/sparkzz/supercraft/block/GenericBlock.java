@@ -9,7 +9,7 @@ import net.sparkzz.supercraft.Supercraft;
  */
 public class GenericBlock extends Block {
 
-	private Float hardness = 4.0f;
+	private Float hardness = 1.0f;
 
 	private int level;
 
@@ -17,16 +17,20 @@ public class GenericBlock extends Block {
 
 	public GenericBlock(Material material) {
 		super(material);
-
-		setCreativeTab(Supercraft.tabSupercraft);
-		setBlockname(name);
-		setBlockTextureName(Supercraft.MODID + ":" + texture);
-		setHardness(hardness);
-		setHarvestLevel(tool, level);
 	}
 
-	public GenericBlock setBlockname(String name) {
+	public GenericBlock create() {
+		setBlockName(name);
+		setBlockTextureName(Supercraft.MODID + ":" + texture);
+		setCreativeTab(Supercraft.tabSupercraft);
+		setHardness(hardness);
+		setHarvestLevel(tool, level);
+		return this;
+	}
+
+	public GenericBlock setUnlocalizedName(String name) {
 		this.name = name;
+		create();
 		return this;
 	}
 
@@ -35,7 +39,7 @@ public class GenericBlock extends Block {
 		return this;
 	}
 
-	public GenericBlock setHardness(float hardness) {
+	public GenericBlock setBlockHardness(float hardness) {
 		this.hardness = hardness;
 		return this;
 	}

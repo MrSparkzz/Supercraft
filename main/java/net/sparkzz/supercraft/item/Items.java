@@ -9,11 +9,14 @@ import net.sparkzz.supercraft.Supercraft;
  */
 public class Items {
 
+	public static Item hyperdiamond = new GenericItem("hyperdiamond").setMaxStackSize(16);
+	public static Item sapphire = new GenericItem("sapphire");
 	public static Item icon = new GenericItem("icon").setCreativeTab(null).setMaxStackSize(0);
-	public static Item hyperdiamond = new GenericItem("hyperdiamond").setCreativeTab(Supercraft.tabSupercraft).setMaxStackSize(16);
+
 
 	public static void registerItems() {
-		GameRegistry.registerItem(icon, "icon");
 		GameRegistry.registerItem(hyperdiamond, "hyperdiamond");
+		GameRegistry.registerItem(sapphire, "sapphire");
+		GameRegistry.registerItem(icon, "icon");
 	}
 }

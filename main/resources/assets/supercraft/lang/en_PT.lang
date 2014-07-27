@@ -2,8 +2,21 @@ language.name=Pirate Speak
 language.region=Web
 language.code=en_PT
 
-itemGroup.tabSupercraft=Supercraft
+# blocks
+tile.hyperdiamondBlock.name=Block o' Better Shinies
+tile.rubyBlock.name=null
+tile.sapphireBlock.name=null
 
+#items
 item.hyperdiamond.name=Better Sparkler
+item.ruby.name=null
+item.sapphire.name=null
 
-tile.hyperdiamondOre.name=Better Shinies
+# ores
+tile.hyperdiamondOre.name=Hyperdiamond Ore
+tile.rubyOre.name=Ruby Ore
+tile.sapphireOre.name=Sapphire Ore
+
+
+# tabs
+itemGroup.tabSupercraft=Supercraft

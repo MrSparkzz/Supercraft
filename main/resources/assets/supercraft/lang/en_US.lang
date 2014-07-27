@@ -2,8 +2,21 @@ language.name=English
 language.region=US
 language.code=en_US
 
-itemGroup.tabSupercraft=Supercraft
+# blocks
+tile.hyperdiamondBlock.name=Hyperdiamond Block
+tile.rubyBlock.name=Ruby Block
+tile.sapphireBlock.name=Sapphire Block
 
+#items
 item.hyperdiamond.name=Hyperdiamond
+item.ruby.name=Ruby
+item.sapphire.name=Sapphire
 
+# ores
 tile.hyperdiamondOre.name=Hyperdiamond Ore
+tile.rubyOre.name=Ruby Ore
+tile.sapphireOre.name=Sapphire Ore
+
+
+# tabs
+itemGroup.tabSupercraft=Supercraft
