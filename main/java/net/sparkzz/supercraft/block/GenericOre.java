@@ -1,7 +1,7 @@
 package net.sparkzz.supercraft.block;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
+import net.minecraft.block.BlockOre;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.sparkzz.supercraft.Supercraft;
 import net.sparkzz.supercraft.item.Items;
@@ -11,7 +11,7 @@ import java.util.Random;
 /**
  * Created by Brendon on 7/27/2014.
  */
-public class GenericOre extends Block {
+public class GenericOre extends BlockOre {
 
 	private Float hardness = 2.0f, resistance = 5.0f;
 
@@ -19,50 +19,28 @@ public class GenericOre extends Block {
 
 	private String name, texture, tool;
 
-	//TODO: change this class to GenericOre and look at the BlockOre class for resources
-	public GenericOre() {
-		super(Material.rock);
-	}
-
-	public GenericOre create() {
-		setBlockName(name);
-		setBlockTextureName(Supercraft.MODID + ":" + texture);
+	public GenericOre(String unlocalizedName) {
 		setCreativeTab(Supercraft.tabSupercraft);
-		setHardness(hardness);
-		setHarvestLevel(tool, level);
-		setResistance(resistance);
-		return this;
-	}
-
-	public GenericOre setBlockHardness(float hardness) {
-		this.hardness = hardness;
-		return this;
+		setBlockName(unlocalizedName);
 	}
 
 	public GenericOre setBlockHarvestLevel(String tool, int level) {
-		this.tool = tool.toLowerCase();
-		this.level = level;
+		setHarvestLevel(tool.toLowerCase(), level);
 		return this;
 	}
 
-	public GenericOre setExplosiveResistance(Float resistance) {
-		this.resistance = resistance;
+	public GenericOre setTab(CreativeTabs tab) {
+		setCreativeTab(tab);
 		return this;
 	}
 
 	public GenericOre setTextureName(String name) {
-		this.texture = name;
-		return this;
-	}
-
-	public GenericOre setUnlocalizedName(String name) {
-		this.name = name;
-		create();
+		setBlockTextureName(Supercraft.MODID + ":" + name);
 		return this;
 	}
 
 	public Item getItemDropped(int metadata, Random random, int fortune) {
-		return this == Blocks.hyperdiamond_ore ? Items.hyperdiamond : (this == Blocks.sapphire_ore ? Items.sapphire : Item.getItemFromBlock(this));
+		return this == Blocks.hyperdiamond_ore ? Items.hyperdiamond : this == Blocks.ruby_ore ? Items.ruby : ((this == Blocks.sapphire_ore ? Items.sapphire : Item.getItemFromBlock(this)));
 	}
 
 	public int quantityDropped() {
@@ -78,6 +56,6 @@ public class GenericOre extends Block {
 			}
 
 			return quantityDropped(random)*(i + 1);
-		} else return quantityDropped(random);
+		} else return quantityDropped();
 	}
 }

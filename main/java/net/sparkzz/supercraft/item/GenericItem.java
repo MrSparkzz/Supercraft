@@ -9,33 +9,19 @@ import net.sparkzz.supercraft.Supercraft;
  */
 public class GenericItem extends Item {
 
-	private CreativeTabs creativeTab = Supercraft.tabSupercraft;
-
-	private int maxStackSize = 64;
-
-	private String name;
-
 	public GenericItem(String unlocalizedName) {
-		setCreativeTab(creativeTab);
-		setMaxStackSize(maxStackSize);
-		setUnlocalizedName(unlocalizedName);
-
+		setCreativeTab(Supercraft.tabSupercraft);
 		setTextureName(Supercraft.MODID + ":" + unlocalizedName);
-		// setTextureName(Supercraft.MODID + ":" + textureName);
+		setUnlocalizedName(unlocalizedName);
 	}
 
-	public GenericItem setCreativeTab(CreativeTabs creativeTab) {
-		this.creativeTab = creativeTab;
+	public GenericItem setCustomTextureName(String name) {
+		setTextureName(name);
 		return this;
 	}
 
-	public GenericItem setMaxStackSize(int size) {
-		this.maxStackSize = size;
-		return this;
-	}
-
-	public GenericItem setItemTextureName(String name) {
-		this.name = name;
+	public GenericItem setTab(CreativeTabs tab) {
+		setCreativeTab(tab);
 		return this;
 	}
 }

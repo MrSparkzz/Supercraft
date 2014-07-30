@@ -36,9 +36,19 @@ public class Supercraft {
 
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
+		removeRecipes();
+
 		Crafting.brewingRecipes();
 		Crafting.shapedRecipes();
 		Crafting.shapelessRecipes();
 		Crafting.smeltingRecipes();
+	}
+
+	private void removeRecipes() {
+		Crafting.removeRecipe(Item.getItemById(267)); // iron sword
+		Crafting.removeRecipe(Item.getItemById(268)); // wooden sword
+		Crafting.removeRecipe(Item.getItemById(272)); // stone sword
+		Crafting.removeRecipe(Item.getItemById(276)); // diamond sword
+		Crafting.removeRecipe(Item.getItemById(283)); // golden sword
 	}
 }
